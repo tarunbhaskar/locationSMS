@@ -1,1 +1,29 @@
+.button-display{
+	    width: 30%;
+    height: 42px;
+    border-radius: 5px;
+    background-color: #d2eeee;
+    color: white;
+}
 
+ .address-text{
+        text-align: center;
+        font-size: 20px;
+    }
+    .watch-text{
+        font-size: 18px;
+    }
+
+    .spinner-pos{
+    margin-left:47%;
+    margin-top:60%;
+    }
+
+    ion-content{
+
+    --ion-background-color: #d2eeee;
+}
+
+.logout{
+    margin-left:95px;
+}

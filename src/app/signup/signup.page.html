@@ -1,0 +1,63 @@
+<ion-header>
+ <ion-toolbar color="primary">
+    <ion-title>
+      Ionic Location - Sign up
+    </ion-title>
+
+    <ion-buttons slot="start" (click)= "goBack()">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+     </ion-toolbar>
+ 
+</ion-header>
+ 
+<ion-content class="login-content" padding >
+   
+    <form (ngSubmit)="register()" #registerForm="ngForm" >
+      <ion-row>
+        <ion-col>
+          <ion-list inset>            
+           <ion-item style="border-bottom:1px solid grey">
+                <ion-input type="text" placeholder="Name" name="name" [(ngModel)]="name" required></ion-input>
+              </ion-item>
+              
+              <ion-item style="border-bottom:1px solid grey">
+                <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="email" required></ion-input>
+              </ion-item>
+              
+              <ion-item>
+                 <ion-label>Organization</ion-label>
+					    <ion-select  okText="Okay" cancelText="Dismiss" name='organization' [(ngModel)]="organization" (ionChange)="changeEnvironment($event)">
+					      <ion-select-option value="ST">Structured Transactions</ion-select-option>
+					      <ion-select-option value="CM">Capital Markets</ion-select-option>
+					    </ion-select>
+              </ion-item>   
+
+              <ion-item>
+                <ion-input type="text" placeholder="Organization-Lead" name="organizationLead" [(ngModel)]="organizationLead" value="{{organizationLead? organizationLead.value : ''}}"></ion-input>
+              </ion-item> 
+
+               <ion-item>
+                <ion-input type="text" placeholder="Reports To" name="reportingLead" [(ngModel)]="reportingLead" required></ion-input>
+              </ion-item> 
+
+               <ion-item >
+              <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>
+            </ion-item>  
+             <ion-item >
+              <ion-input type="text" placeholder="Contact" name="contact" [(ngModel)]="contact" required></ion-input>
+            </ion-item>         
+          
+
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col class="signup-col">
+          <ion-button expand="block" class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Register</ion-button>
+        </ion-col>
+      </ion-row>      
+    </form>
+ 
+</ion-content>

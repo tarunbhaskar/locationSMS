@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Ionic Location - Sign in 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding >
+    <form (ngSubmit)="login()" #registerForm="ngForm" style="background-color: #d2eeee; margin-top:30%">
+        <ion-row>
+          <ion-col>
+            <ion-list inset>
+              
+              <ion-item style="border-bottom:1px solid grey">
+                <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="email" required></ion-input>
+              </ion-item>
+              
+              <ion-item>
+                <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>
+              </ion-item>           
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col class="signup-col">
+            <ion-button expand="block" style="color: #" class="submit-btn" type="submit" [disabled]="!registerForm.form.valid">Login</ion-button>
+          </ion-col>
+        </ion-row>           
+      </form>
+
+      <ion-row>
+        <ion-col class="signup-col">
+          <ion-button expand="block" class="submit-btn" type="submit" [routerLink]="['/signup']">Sign Up</ion-button>
+        </ion-col>
+      </ion-row>  
+</ion-content>
