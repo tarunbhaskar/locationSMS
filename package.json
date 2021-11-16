@@ -31,7 +31,7 @@
     "@ionic/lab": "^1.0.21",
     "@ionic/pro": "2.0.4",
     "amazon-cognito-identity-js": "^3.0.10",
-    "aws-sdk": "^2.454.0",
+    "aws-sdk": "^2.814.0",
     "cordova-android": "7.1.4",
     "cordova-browser": "5.0.4",
     "cordova-plugin-device": "^2.0.2",
